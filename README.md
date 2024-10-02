@@ -11,3 +11,6 @@ Please check our [Colab Notebook](https://colab.research.google.com/drive/1xWbek
 
 ### Sequence annotation
 For the lab of origin prediction, please check our [Colab Notebook](https://colab.research.google.com/drive/1vo27RBnScf_cOISBdd13YN_hr5-ZVNHx?usp=sharing) in the browser.
+
+### Reference
+- [PlasmidGPT: a generative framework for plasmid design and annotation](https://www.biorxiv.org/content/10.1101/2024.09.30.615762v1)
