@@ -41,7 +41,7 @@ outputs = model.generate(
 generated_sequence = tokenizer.decode(outputs[0], skip_special_tokens=True).replace(" ", "")
 ```
 
-Please check our jupyter notebook [PlasmidGPT_generate.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebook/PlasmidGPT_generate.ipynb). Or you can easily use our [Colab Notebook](https://colab.research.google.com/drive/1xWbekcTpcGMSiQE6LkRnqSTjswDkKAoc?usp=sharing) in the browser. Please make sure to connect to a GPU instance (e.g. T4 GPU).
+Please check our jupyter notebook [PlasmidGPT_generate.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebooks/PlasmidGPT_generate.ipynb). Or you can easily use our [Colab Notebook](https://colab.research.google.com/drive/1xWbekcTpcGMSiQE6LkRnqSTjswDkKAoc?usp=sharing) in the browser. Please make sure to connect to a GPU instance (e.g. T4 GPU).
 
 ### Model embeddings
 ```python
@@ -58,7 +58,7 @@ with torch.no_grad():
 ### Sequence annotation
 For prediction of attributes, please check our models in the ```prediction_models``` folder
 
-We have provided the jupyter notebook: [PlasmidGPT_predict.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebook/PlasmidGPT_predict.ipynb) and the
+We have provided the jupyter notebook: [PlasmidGPT_predict.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebooks/PlasmidGPT_predict.ipynb) and the
 [Colab Notebook](https://colab.research.google.com/drive/1vo27RBnScf_cOISBdd13YN_hr5-ZVNHx?usp=sharing) which can be easily used in the browser.
 
 ### Reference
