@@ -21,8 +21,7 @@ import torch
 # load the model
 device = 'cpu' # use 'cuda' for GPU
 
-model = torch.load(pt_file_path)
-model = model.to(device)
+model = torch.load(pt_file_path).to(device)
 model.eval()
 
 # start sequence
