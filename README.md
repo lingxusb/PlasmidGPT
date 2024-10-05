@@ -15,7 +15,7 @@ To install `PlasmidGPT`, run the following bash script:
 The trained model and tokenizer is availale at [huggingface](https://huggingface.co/lingxusb/PlasmidGPT/tree/main). 
 
 ### Sequence generation
-```
+```python
 import torch
 
 # load the model
@@ -45,7 +45,7 @@ generated_sequence = tokenizer.decode(outputs[0], skip_special_tokens=True).repl
 Please check our jupyter notebook [PlasmidGPT_generate.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebook/PlasmidGPT_generate.ipynb) Or you can use our [Colab Notebook](https://colab.research.google.com/drive/1xWbekcTpcGMSiQE6LkRnqSTjswDkKAoc?usp=sharing) in the browser. Please make sure to connect to a GPU instance (e.g. T4 GPU).
 
 ### Model embeddings
-```
+```python
 # calculation of model embeddings
 model.config.output_hidden_states = True
 
