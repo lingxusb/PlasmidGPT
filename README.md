@@ -59,7 +59,7 @@ with torch.no_grad():
 ### Sequence annotation
 For prediction of attributes, please check our models in the ```prediction_models``` folder
 
-We have provided the jupyter notebook: [PlasmidGPT_generate.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebook/PlasmidGPT_predict.ipynb) and the
+We have provided the jupyter notebook: [PlasmidGPT_predict.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebook/PlasmidGPT_predict.ipynb) and the
 [Colab Notebook](https://colab.research.google.com/drive/1vo27RBnScf_cOISBdd13YN_hr5-ZVNHx?usp=sharing) in the browser.
 
 ### Reference
