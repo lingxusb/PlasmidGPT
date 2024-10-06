@@ -58,8 +58,9 @@ with torch.no_grad():
 ### Sequence annotation
 For prediction of attributes, please check our models in the ```prediction_models``` folder
 
-We have provided the jupyter notebook: [PlasmidGPT_predict.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebooks/PlasmidGPT_predict.ipynb) and the
-[Colab Notebook](https://colab.research.google.com/drive/1vo27RBnScf_cOISBdd13YN_hr5-ZVNHx?usp=sharing) which can be easily used in the browser.
+We have provided the jupyter notebook [PlasmidGPT_predict.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebooks/PlasmidGPT_predict.ipynb) for the prediction of lab of origin.
+
+The [Colab Notebook](https://colab.research.google.com/drive/1vo27RBnScf_cOISBdd13YN_hr5-ZVNHx?usp=sharing) can be easily used in the browser to predict lab of origin, species and vector type for the input sequence.
 
 ### Reference
 - [PlasmidGPT: a generative framework for plasmid design and annotation](https://www.biorxiv.org/content/10.1101/2024.09.30.615762v1)
