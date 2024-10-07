@@ -38,7 +38,7 @@ outputs = model.generate(
 )
 
 # transform tokens back to DNA ucleotide sequence:
-generated_sequence = tokenizer.decode(outputs[0], skip_special_tokens=True).replace(" ", "")
+generated_sequence = tokenizer.decode(outputs[0], skip_special_tokens=True)
 ```
 
 Please check our jupyter notebook [PlasmidGPT_generate.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebooks/PlasmidGPT_generate.ipynb). Or you can easily use our [Colab Notebook](https://colab.research.google.com/drive/1xWbekcTpcGMSiQE6LkRnqSTjswDkKAoc?usp=sharing) in the browser. Please make sure to connect to a GPU instance (e.g. T4 GPU).
