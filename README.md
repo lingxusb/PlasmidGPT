@@ -19,7 +19,7 @@ We recommend using [Conda](https://docs.conda.io/en/latest/index.html) to instal
    ```
 
 2. Create and activate the Conda environment:
-   ```
+   ```bash
    conda env create -f env.yml
    conda activate PlasmidGPT
    ```
