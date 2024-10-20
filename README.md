@@ -3,15 +3,15 @@
 
 We introduce PlasmidGPT, a generative language model pretrained on 153k engineered plasmid sequences from Addgene (https://www.addgene.org/). PlasmidGPT generates de novo sequences that share similar characteristics with engineered plasmids but show low sequence identity to the training data. We demonstrate its ability to generate plasmids in a controlled manner based on the input sequence or specific design constraint. Moreover, our model learns informative embeddings of both engineered and natural plasmids, allowing for efficient prediction of a wide range of sequence-related attributes.
 
-### Table of Contents
+## Table of Contents
 
 - [Installation](#Installation)
 - [Trained model](#Trained-model)
 - [Sequence generation](#Sequence-generation)
-- [Model Embeddings](#Model-embeddings)
+- [Model embeddings](#Model-embeddings)
 - [Sequence annotation](#Sequence-annotation)
 
-### Installation
+## Installation
 Python package dependencies:
 - torch 2.0.1
 - transformers 4.37.2
@@ -32,12 +32,13 @@ We recommend using [Conda](https://docs.conda.io/en/latest/index.html) to instal
    conda activate PlasmidGPT
    ```
 
-### Trained model
+## Trained model
 The trained model and tokenizer is availale at [huggingface](https://huggingface.co/lingxusb/PlasmidGPT/tree/main).
 - ```pretrained_model.pt```, pretrained PlasmidGPT model, can be accessed [here](https://huggingface.co/lingxusb/PlasmidGPT/blob/main/pretrained_model.pt)
 - ```addgene_trained_dna_tokenizer.json```, trained BPE tokenizer on Addgene plasmid sequences, can be accessed [here](https://huggingface.co/lingxusb/PlasmidGPT/blob/main/addgene_trained_dna_tokenizer.json)
 
-### Sequence generation
+
+## Sequence generation
 ```python
 import torch
 
@@ -63,7 +64,7 @@ outputs = model.generate(
 # transform tokens back to DNA ucleotide sequence:
 generated_sequence = tokenizer.decode(outputs[0], skip_special_tokens=True)
 ```
-#### command line
+### command line
 To generate plasmid sequence using the model, please run the following command:
 ```Python
 python generate.py --model_dir ../pretrained_model
@@ -92,13 +93,13 @@ Arguments description
 The model output will be stored in the ```generated_sequence.fasta``` file. The script should automatically detect whether to use CUDA (GPU) or CPU based on availability. If you encounter a CUDA-related error when running on a CPU-only machine, the script will handle this by falling back to CPU.
 
 
-#### notebooks
+### notebooks
 Please also check our jupyter notebook [PlasmidGPT_generate.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebooks/PlasmidGPT_generate.ipynb).
 
 Or, you can easily use our [Colab Notebook](https://colab.research.google.com/drive/1xWbekcTpcGMSiQE6LkRnqSTjswDkKAoc?usp=sharing) in the browser. Please make sure to connect to a GPU instance (e.g., T4 GPU). The notebook will automatically download the pretrained model and tokenizer. The plasmid sequence can be generated based on the user's specified start sequence and downloaded in the ```.fasta``` file format.
 
 
-### Model embeddings
+## Model embeddings
 ```python
 # calculation of model embeddings
 model.config.output_hidden_states = True
@@ -110,7 +111,7 @@ with torch.no_grad():
     hidden_states_mean = np.mean(hidden_states, axis=1).reshape(-1)    
     embedding.append(hidden_states_mean)
 ```
-#### command
+### command
 To generate plasmid sequence embeddings, please run the following command:
 ```Python
 python embeddings.py [-h] -m MODEL_DIR -f FASTA_FILE [-o OUTPUT_FILE]
@@ -128,10 +129,10 @@ Arguments description
 The model output will be save in the ```embeddings.txt file```.
 
 
-### Sequence annotation
+## Sequence annotation
 For prediction of attributes, please check our models in the ```prediction_models``` folder.
 
-#### command
+### command
 To predict lab of origin based on input fasta file, please run the following command:
 ```Python
 python prediction.py [-h] -m MODEL_DIR -i INPUT_FILE [-e] -nn NN_MODEL -l LAB_LIST [-o OUTPUT_FILE] [-n TOP_N]
@@ -152,7 +153,7 @@ Arguments description
 
 The top predictions will be stored in the file ```lab_predictions.txt```, where each row corresponds to one input sequence.
 
-#### notebooks
+### notebooks
 We have provided the jupyter notebook [PlasmidGPT_predict.ipynb](https://github.com/lingxusb/PlasmidGPT/blob/main/notebooks/PlasmidGPT_predict.ipynb) for the prediction of lab of origin.
 
 The [Colab Notebook](https://colab.research.google.com/drive/1vo27RBnScf_cOISBdd13YN_hr5-ZVNHx?usp=sharing) can be easily used in the browser to predict the lab of origin, species, and vector type for the input sequence. The notebook will automatically download all related models and make predictions based on the user's input plasmid sequence. Please use the drop-down list to select the feature to predict, and the top 10 predictions will be displayed.
