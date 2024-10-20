@@ -126,7 +126,7 @@ Arguments description
 |  ```-f```, ```--fasta_file```| FASTA file containing DNA sequences for the embedding calculation, __required__  |
 | ```-o```, ```--output_file```| output file name for saving the embeddings |
 
-The model output will be save in the ```embeddings.txt file```.
+The model output will be save in the ```embeddings.txt``` file.
 
 
 ## Sequence annotation
@@ -137,6 +137,7 @@ To predict lab of origin based on input fasta file, please run the following com
 ```Python
 python prediction.py [-h] -m MODEL_DIR -i INPUT_FILE [-e] -nn NN_MODEL -l LAB_LIST [-o OUTPUT_FILE] [-n TOP_N]
 ```
+The neural network model for lab prediction is provided in ```./prediction_models/embedding_prediction_labs.pth```. The lab labels are provided in ```./prediction_models/lab_list.txt```.
 
 Arguments description
 
