@@ -34,7 +34,7 @@ We recommend using [Conda](https://docs.conda.io/en/latest/index.html) to instal
    ```
 
 ## Trained model
-The trained model and tokenizer is availale at [huggingface](https://huggingface.co/lingxusb/PlasmidGPT/tree/main).
+The trained model and tokenizer is availale at [huggingface](https://huggingface.co/lingxusb/PlasmidGPT/tree/main). It is worth noting that Released model weights are licensed under CC BY-NC 4.0. Commercial use of the weights is not permitted without separate permission.
 - ```pretrained_model.pt```, pretrained PlasmidGPT model, can be accessed [here](https://huggingface.co/lingxusb/PlasmidGPT/blob/main/pretrained_model.pt)
 - ```addgene_trained_dna_tokenizer.json```, trained BPE tokenizer on Addgene plasmid sequences, can be accessed [here](https://huggingface.co/lingxusb/PlasmidGPT/blob/main/addgene_trained_dna_tokenizer.json)
 
